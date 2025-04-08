@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <div class="container mx-auto px-4 py-8">
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-indigo-700 mb-2">Mood Recipes</h1>
+      <p class="text-xl text-gray-600">Find the perfect recipe to match how you feel</p>
+    </header>
+
+    <div class="mood-selector mb-10">
+      <h2 class="text-2xl font-semibold text-center mb-6">How are you feeling today?</h2>
+      <div id="mood-buttons" class="grid grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-5">
+        <!-- Mood buttons will be loaded here -->
+      </div>
+    </div>
+
+    <div id="recipe-container" class="hidden mx-auto max-w-3xl bg-white rounded-lg shadow-lg overflow-hidden">
+      <div class="relative">
+        <div id="recipe-image" class="w-full h-64 bg-cover bg-center"></div>
+        <div class="absolute top-0 right-0 m-4">
+          <button id="new-recipe-btn" class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-colors duration-200">
+            Try another recipe
+          </button>
+        </div>
+      </div>
+      
+      <div class="p-6">
+        <h2 id="recipe-title" class="text-3xl font-bold text-gray-800 mb-2"></h2>
+        <p id="recipe-description" class="text-gray-600 mb-4 italic"></p>
+        
+        <div class="flex mb-4 text-sm text-gray-500">
+          <div class="flex items-center mr-6">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span id="recipe-prep-time"></span> prep
+          </div>
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span id="recipe-cook-time"></span> cook
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Ingredients</h3>
+          <ul id="recipe-ingredients" class="list-disc pl-5 space-y-1 text-gray-700"></ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Instructions</h3>
+          <div id="recipe-instructions" class="text-gray-700 space-y-2 whitespace-pre-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login • DemoApp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            max-width: 350px;
+        }
+        
+        .login-box {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            padding: 20px 40px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        
+        .logo {
+            margin: 30px auto;
+            text-align: center;
+        }
+        
+        .logo img {
+            width: 175px;
+        }
+
+        .logo-text {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 42px;
+            color: #262626;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        input {
+            padding: 9px 0 7px 8px;
+            background-color: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            margin-bottom: 6px;
+            font-size: 12px;
+        }
+        
+        button.login-button {
+            background-color: #0095F6;
+            color: white;
+            padding: 7px 9px;
+            border-radius: 4px;
+            border: none;
+            font-weight: 600;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .or-divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .or-divider::before,
+        .or-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #dbdbdb;
+        }
+        
+        .or-text {
+            margin: 0 18px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #8e8e8e;
+        }
+        
+        .facebook-login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #385185;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        
+        .facebook-icon {
+            margin-right: 8px;
+            color: #385185;
+        }
+        
+        .forgot-password {
+            font-size: 12px;
+            color: #00376b;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .signup-box {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .signup-text {
+            font-size: 14px;
+            color: #262626;
+        }
+        
+        .signup-link {
+            color: #0095F6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .get-app {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .get-app-text {
+            font-size: 14px;
+            color: #262626;
+            margin-bottom: 20px;
+        }
+        
+        .app-downloads {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .app-store {
+            margin: 0 4px;
+            height: 40px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: auto;
+            padding: 20px 0;
+            width: 100%;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+            max-width: 1000px;
+            margin: 0 auto 20px;
+        }
+        
+        .footer-link {
+            margin: 0 8px 12px;
+            font-size: 12px;
+            color: #8e8e8e;
+            text-decoration: none;
+        }
+        
+        .language-copyright {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #8e8e8e;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+        
+        .language-selector {
+            margin-right: 10px;
+            border: none;
+            background: none;
+            color: #8e8e8e;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <div class="logo-text">DemoApp</div>
+            </div>
+            
+            <form>
+                <input type="text" placeholder="Phone number, username, or email" aria-label="Phone number, username, or email">
+                <input type="password" placeholder="Password" aria-label="Password">
+                <button type="submit" class="login-button">Log in</button>
+            </form>
+            
+            <div class="or-divider">
+                <span class="or-text">OR</span>
+            </div>
+            
+            <div class="facebook-login">
+                <span class="facebook-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#385185" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                </span>
+                Log in with Facebook
+            </div>
+            
+            <div class="forgot-password">
+                Forgot password?
+            </div>
+        </div>
+        
+        <div class="signup-box">
+            <p class="signup-text">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+        </div>
+        
+        <div class="get-app">
+            <p class="get-app-text">Get the app.</p>
+            <div class="app-downloads">
+                <a href="#" target="_blank">
+                    <img class="app-store" src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png" alt="Download on the App Store">
+                </a>
+                <a href="#" target="_blank">
+                    <img class="app-store" src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" alt="Get it on Google Play">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#" class="footer-link">Meta</a>
+            <a href="#" class="footer-link">About</a>
+            <a href="#" class="footer-link">Blog</a>
+            <a href="#" class="footer-link">Jobs</a>
+            <a href="#" class="footer-link">Help</a>
+            <a href="#" class="footer-link">API</a>
+            <a href="#" class="footer-link">Privacy</a>
+            <a href="#" class="footer-link">Terms</a>
+            <a href="#" class="footer-link">Locations</a>
+            <a href="#" class="footer-link">DemoApp Lite</a>
+            <a href="#" class="footer-link">Threads</a>
+            <a href="#" class="footer-link">Contact Uploading & Non-Users</a>
+            <a href="#" class="footer-link">Meta Verified</a>
+        </div>
+        <div class="language-copyright">
+            <select class="language-selector" aria-label="Switch language">
+                <option value="en">English</option>
+            </select>
+            <span>© 2025 DemoApp from Meta</span>
+        </div>
+    </footer>
+</body>
+</html>

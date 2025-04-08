@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
+  },
+  "description": "A web application that suggests recipes based on your mood",
+  "devDependencies": {
+    "dotenv": "^16.4.1",
+    "nodemon": "^3.0.3"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "main": "app.js",
+  "name": "mood-recipe-finder",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "debug": "node --inspect-brk app.js"
+  },
+  "version": "1.0.0"
+}
